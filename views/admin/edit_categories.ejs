@@ -1,0 +1,18 @@
+<%- include('../layout/adminHeader') %>
+
+<h2 class="page-title">Edit a Categories</h2>
+<a href="/admin/categories" class="btn btn-primary">Back to All Categories</a>
+<br /><br />
+
+<form action="/admin/categories/edit-categories" method="post">
+    <div class="form-group">
+        <label for="">Title *</label>
+        <input type="text" name="title" class="form-control" value="<%= title %>" placeholder="Title" />
+        <input type="hidden" name="id" value="<%= id %>">
+    </div>
+
+    <button class="btn btn-default">Kirim</button>
+</form>
+
+
+<%- include('../layout/adminFooter') %>

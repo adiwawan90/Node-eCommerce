@@ -1,0 +1,28 @@
+<%- include('../layout/adminHeader') %>
+
+<h2 class="page-title">Edit a page</h2>
+<a href="/admin/pages" class="btn btn-primary">Back to All pages</a>
+<br /><br />
+
+<form action="/admin/pages/edit-page" method="post">
+  <div class="form-group">
+    <label for="">Title *</label>
+    <input type="text" name="title" class="form-control" value="<%= title %>" placeholder="Title" />
+  </div>
+  <div class="form-group">
+    <label for="">Link</label>
+    <input type="text" name="link" class="form-control" value="<%= link %>" placeholder="Link" />
+  </div>
+  <div class="form-group">
+    <label for="">Content *</label>
+    <textarea name="content" class="form-control" value="<%= content %>" id="editor" cols="30" rows="10"
+      placeholder="Content">
+      <%= content %>
+  </textarea>
+  </div>
+  <button class="btn btn-default">Kirim</button>
+  <input type="hidden" value="<%= id %>" name="">
+</form>
+
+
+<%- include('../layout/adminFooter') %>
